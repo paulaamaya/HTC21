@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Canvaccine</title>
-        <meta name="description" content="Canada's vaccination sign-up engine'">
+        <title>Last Wave Canada</title>
+        <meta name="description" content="Canada's COVID-19 vaccination portal'">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link href="../css/styles.css" rel="stylesheet">
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function(){
@@ -20,27 +19,31 @@
                 })
             });
         </script>
-        <style>
-          .red {
-            color: red;
-          }
-        </style>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <section id="introduction">
-            <h1>Canvaccine</h1>
-            <p>Welcome to Canada's vaccination blah blah. Please enter all information as it appears on your health card.</p>
+        
+        <!-- Main Heading -->
+        <section id="main-heading">
+            <div id="heading-banner">
+                <img src="../images/heading-banner.png" alt="Last Wave | COVID-19 Vaccination Portal Banner" width=100%>
+            </div>
         </section>
 
-        {% if error %}
+
+        <section id="introduction">
+            <h1>Last Wave</h1>
+            <p>Welcome to Canada's COVID-19 vaccination portal.</p>
+        </section>
+
+        <!-- {% if error %}
           <p>Signup Error: <span class="red">{{ error }}</span>!</p>
         {% else %}
           <p>no errors in sight!</p>
-        {% endif %}
+        {% endif %} -->
 
         <form action="/signup" method="post">
             
@@ -72,7 +75,7 @@
 
             <fieldset>
                 <legend>Vaccination Centre Preferences</legend>
-
+                <!-- Insert 5 x 4 table -->
             </fieldset>
 
             <button>GO!</button>
@@ -82,5 +85,12 @@
         <button id="change-button">change name</button>
 
         <div id="deleteme">hi</div>
+
+        <Footer id="main-footer">
+            <div id="footer-info" class="py-4">
+                <p> For more information on the Canadian vaccination plan please visit:</p>
+                <a href="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19/vaccines.html" id="footer-link">www.canada.ca</a></p>
+            </div>
+        </Footer>
     </body>
 </html>

@@ -1,0 +1,26 @@
+/*********TAG SELECTORS**********/
+
+/*********CLASS SELECTORS*********/
+.red {
+    color: red;
+}
+
+/*********ID SELECTORS*********/
+#main-footer {
+    background-color: black;
+}
+
+#footer-info{
+    color:white;
+    text-align: center;
+    font-size: larger;
+}
+
+#footer-link{
+    color: white;
+    text-decoration: none;
+}
+
+#footer-link:hover{
+    color:grey;
+}
