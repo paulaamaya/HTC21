@@ -11,6 +11,20 @@
         <meta name="description" content="Canada's vaccination sign-up engine'">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                $("#deleteme").html('Hello!');
+                $("#change-button").click(function(){
+                    $("#deleteme").html('clicked!');
+                })
+            });
+        </script>
+        <style>
+          .red {
+            color: red;
+          }
+        </style>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -22,7 +36,13 @@
             <p>Welcome to Canada's vaccination blah blah. Please enter all information as it appears on your health card.</p>
         </section>
 
-        <form action="">
+        {% if error %}
+          <p>Signup Error: <span class="red">{{ error }}</span>!</p>
+        {% else %}
+          <p>no errors in sight!</p>
+        {% endif %}
+
+        <form action="/signup" method="post">
             
             <fieldset>
                 <legend>Personal Information</legend>
@@ -55,7 +75,12 @@
 
             </fieldset>
 
+            <button>GO!</button>
 
-        <script src="" async defer></script>
+        </form>
+
+        <button id="change-button">change name</button>
+
+        <div id="deleteme">hi</div>
     </body>
 </html>

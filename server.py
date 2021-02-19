@@ -13,11 +13,20 @@ def log_the_user_in(username):
   # server the page for the logged in user
   return render_template('template.html')
 
+def sign_up_user(form_data):
+  l = ['first-name', 'last-name', 'email', 'age']
+  for label in l:
+      if not form_data[label]:
+          return label + 'field was left empty'
+  # put everything in a database
+  # something with cookies?
+  return False
+
 ## end helpers
 
 @app.route('/')
 def index():
-    return 'home page goes here!'
+    return render_template('index.html')
 
 @app.route('/hello')
 def hello():
@@ -40,6 +49,15 @@ def login():
 
 @app.route('/signup', methods=['POST'])
 def signup():
-    # do some signup stuff
-    return 'signup' # serve the next page
+    error = None
+    l = ['first-name', 'last-name', 'email', 'age']
+    for label in l:
+      if not label in request.form:
+        error = 'Missing data'
+        return render_template('index.html', error=error)
+    error = sign_up_user(request.form)
+    if not error:
+        # handle the page in this method
+        return log_the_user_in(request.form['email'])
+    return render_template('index.html', error=error)
     
