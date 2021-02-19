@@ -1,0 +1,13 @@
+<html>
+<style>
+  .red {
+    color: red;
+  }
+</style>
+<p>Login template file</p>
+{% if error %}
+  <p>Login Error: <span class="red">{{ error }}</span>!</p>
+{% else %}
+  <p>no errors in sight!</p>
+{% endif %}
+</html>
