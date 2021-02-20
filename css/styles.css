@@ -13,6 +13,10 @@
   margin-bottom: 10px;
 }
 
+.centre-preference-check {
+  margin-right: 20px;
+}
+
 /*********ID SELECTORS*********/
 #introduction{
     background-color: #bbbfca;
