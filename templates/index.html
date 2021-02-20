@@ -41,138 +41,83 @@
 
         <!-- Form -->
         <section id="form" class="mx-4">
-            <form>
+            <form action="/signup" method="POST">
                 <!-- Personal Info -->
                 <h2>Personal Information</h2>
-                <div class="row">
+                <div class="row mb-3">
                     <div class="col">
-                        <label for="first-name">First name</label><br>
+                        <label for="first-name">First name</label>
                         <input type="text" class="form-control" name="first-name" placeholder="First Name">
                     </div>
                     <div class="col">
-                        <label for="first-name">Last name</label><br>
+                        <label for="first-name">Last name</label>
                         <input type="text" class="form-control" name="last-name" placeholder="Last Name">
                     </div>
                 </div>
-                <div class="form-row">
-
+                <div class="row">
+                    <div class="col">
+                        <label for="health-card-num">Provincial Health Card Number</label>
+                        <input type="text" class="form-control" name="health-card-num" placeholder="Health Card Number">
+                    </div>
                 </div>
-            
-
-
-
-
-
-
-
-
-
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                  </div>
+                <div class="row my-3">
+                    <div class="col-md-8">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="year">Year of Birth</label>
+                        <select class="form-control" name="year">
+                            <option selected>Choose...</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <!-- TO-DO : Insert options here. -->
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="inputAddress">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <div class="row mb-3">
+                    <div class="col-md-8">
+                        <!-- TO-DO : Update this in terms with govt guidelines -->
+                        <p>Do you consider yourself to be a high-risk individual?  High-risk individuals meet one or more of the following criteria</p>
+                        <ul>
+                            <li>Lung Disease</li>
+                            <li>Other stuff</li>
+                            <li>More Stuff</li>
+                            <li> Even more stuff</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="is-at-risk" value="at-risk">
+                            <label class="form-check-label" for="is-at-risk">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="is-at-risk" value="not-at-risk">
+                            <label class="form-check-label" for="is-at-risk">No</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="inputAddress2">Address 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                <!-- Vaccination Groups -->
+                <hr>
+                <h2>Vaccination Groups</h2>
+                <div class="row mb-3">
+                    <div class="col">
+                        <p>You may choose to be scheduled along with members of your household.  If you wish to do so, please enter their health card numbers below. <b>Note:</b> Each member of the household must also fill out this form indicating the members in the vacination group.</p>
+                        <button type="button" class="btn btn-secondary mb-3">Add Family Member</button><br>
+                        <!-- TO - DO : Insert More Text Field Option Here -->
+                        <label for="member1">Family Member 1</label>
+                        <input type="text" class="form-control" name="member1" placeholder="Health Card Number">
+                    </div>
                 </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputState">State</label>
-                    <select id="inputState" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>...</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-2">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Check me out
-                    </label>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-              </form>
+                <!-- Vaccination Centre Preferences -->
+                <h2>Vaccination Centre Preferences</h2>
 
+            </form>
         </section>
 
 
-
-
-
-
-
-
-
-
-
-        <form action="/signup" method="post">
-            
-            <fieldset>
-                <legend>Personal Information</legend>
-
-                <label for="first-name">First name:</label><br>
-                <input type="text" name="first-name">
-
-                <label for="last-name">Last name:</label><br>
-                <input type="text" name="last-name"><br>
-
-                <label for="email">Email:</label><br>
-                <input type="text" name="email"><br>
-
-                <label for="age">Age:</label><br>
-                <input type="text" name="age"><br>
-            </fieldset>
-            
-            <fieldset>
-                <legend>Groups</legend>
-
-                <p>For the sake of convenience you may choose to be scheduled along with members of your household.  If you wish to do so, please enter their health card numbers below.</p>
-
-                <p>We recommend that high-risk individuals do not sign up as a group since this may delay their vaccination date.</p>
-
-                <!-- Insert a bunch of buttons -->
-            </fieldset>
-
-            <fieldset>
-                <legend>Vaccination Centre Preferences</legend>
-                <!-- Insert 5 x 4 table -->
-            </fieldset>
-
+    
             <button>GO!</button>
-
-        </form>
-
-
-
-
-
-
-
-
-
-
-
-
         <button id="change-button">change name</button>
 
         <div id="deleteme">hi</div>
