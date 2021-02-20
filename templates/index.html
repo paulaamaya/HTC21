@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Last Wave Canada</title>
+        <title>Last Wave Portal</title>
         <meta name="description" content="Canada's COVID-19 vaccination portal'">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Stylesheets -->
@@ -29,7 +29,7 @@
 
 
         <!-- Introduction -->
-        <section id="introduction">
+        <section id="introduction" class="mx-4">
             <p>INSERT INTRO MESSAGE HERE</p>
         </section>
 
@@ -39,13 +39,99 @@
           <p>no errors in sight!</p>
         {% endif %} -->
 
+        <!-- Form -->
+        <section id="form" class="mx-4">
+            <form>
+                <!-- Personal Info -->
+                <h2>Personal Information</h2>
+                <div class="row">
+                    <div class="col">
+                        <label for="first-name">First name</label><br>
+                        <input type="text" class="form-control" name="first-name" placeholder="First Name">
+                    </div>
+                    <div class="col">
+                        <label for="first-name">Last name</label><br>
+                        <input type="text" class="form-control" name="last-name" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-row">
+
+                </div>
+            
+
+
+
+
+
+
+
+
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Address 2</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Check me out
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </form>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
         <form action="/signup" method="post">
             
             <fieldset>
                 <legend>Personal Information</legend>
 
                 <label for="first-name">First name:</label><br>
-                <input type="text" name="first-name"><br>
+                <input type="text" name="first-name">
 
                 <label for="last-name">Last name:</label><br>
                 <input type="text" name="last-name"><br>
@@ -75,6 +161,17 @@
             <button>GO!</button>
 
         </form>
+
+
+
+
+
+
+
+
+
+
+
 
         <button id="change-button">change name</button>
 
