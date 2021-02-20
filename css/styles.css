@@ -5,6 +5,14 @@
     color: red;
 }
 
+.center {
+  text-align: center;
+}
+
+.family-member-card {
+  margin-bottom: 10px;
+}
+
 /*********ID SELECTORS*********/
 #introduction{
     background-color: #bbbfca;
