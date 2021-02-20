@@ -22,6 +22,7 @@ $(document).ready(function(){
     let locations = ["Windsor Regional Hospital","London Health Sciences Centre","Grand River Hospital","Halton Healthcare","Hamilton Health Sciences","William Osler Health System","Trillium Health Partners","Southlake Regional Health Centre","Mackenzie Health","Humber River Hospital","Sunnybrook Health Sciences Centre","Michael Garron Hospital","Unity Health Toronto","Scarborough Health Network","Lakeridge Health","Royal Victoria Regional Health Centre","Thunder Bay Regional Health Sciences Centre"];
     let table = $('#centrePreference');
     $('#provinceSelect').change(function(){
+        table.empty();
         var limit = 3;
         let count = 0;
         for(let i = 0; i < Math.ceil(locations.length/3); i++){
@@ -29,7 +30,7 @@ $(document).ready(function(){
             table.append(tableRow);
             for(let j=0;j<3;j++){
                 count++;
-                if (count > locations.length) break;
+                if (count >= locations.length) break;
                 let tableData = $('<div class="col-md-4 form-check">');
                 let label = $('<label>').text(locations[count]).attr({for: `centre${count}`});
                 let input = $(`<input class="centre-preference-check" type="checkbox" name="centre${count}" id="centre${count}">`);
