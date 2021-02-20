@@ -42,9 +42,17 @@ $(document).ready(function(){
 
                 tableData.append(input);
                 tableData.append(label);
-                tableData.append(`<p>Ontario, Canada</p>`);
+                // tableData.append(`<p>Ontario, Canada</p>`);
                 tableRow.append(tableData);
             }
         }
+    })
+
+    // hide intro
+    $('#intro-hide-button').click(function(){
+        let currentSymbol = $('#intro-hide-button').html();
+        if(currentSymbol == '-') $('#intro-hide-button').html('+');
+        else $('#intro-hide-button').html('-');
+        $('#intro-paragraph').toggleClass('intro-hidden');
     })
 });

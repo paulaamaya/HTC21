@@ -17,6 +17,33 @@
   margin-right: 20px;
 }
 
+.relative {
+  position: relative;
+}
+
+.fixed-height {
+  line-height: 50px;
+}
+
+.intro-paragraph {
+  max-height: 800px;
+  transition: max-height 0.5s ease-out;
+}
+
+.intro-hide-button {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  height: 30px;
+  line-height: 9px;
+}
+
+.intro-hidden {
+  max-height: 65px;
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-in;
+}
+
 /*********ID SELECTORS*********/
 #introduction{
     background-color: #bbbfca;
