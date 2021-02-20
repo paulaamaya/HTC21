@@ -15,10 +15,6 @@
         <script type="text/javascript" src="../js/script.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
         
         <!-- Main Heading -->
         <section id="main-heading">
@@ -101,17 +97,45 @@
                 <hr>
                 <h2>Vaccination Groups</h2>
                 <div class="row mb-3">
-                    <div class="col">
+                    <div class="col-md-8">
                         <p>You may choose to be scheduled along with members of your household.  If you wish to do so, please enter their health card numbers below. <b>Note:</b> Each member of the household must also fill out this form indicating the members in the vacination group.</p>
-                        <button type="button" class="btn btn-secondary mb-3">Add Family Member</button><br>
-                        <!-- TO - DO : Insert More Text Field Option Here -->
-                        <label for="member1">Family Member 1</label>
-                        <input type="text" class="form-control" name="member1" placeholder="Health Card Number">
                     </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-secondary btn-lg btn-block">Add Family Member</button><br>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <!-- TO - DO : Insert More Text Field Option Here -->
+                    <label for="member1">Family Member 1</label>
+                    <input type="text" class="form-control" name="member1" placeholder="Health Card Number">
                 </div>
                 <!-- Vaccination Centre Preferences -->
                 <hr>
                 <h2>Vaccination Centre Preferences</h2>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <p>Please select the province where you recide to see vaccination centres near you.  In order to be consiredered a resiedent of said province you must provide proof of residence (lease agreement, landlord's letter, confirmation of employment, etc.) or an active health card of said province.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="province">Province</label>
+                        <select class="form-control" name="province">
+                            <option selected>Choose...</option>
+                            <option value="AB">Alberta</option>
+                            <option value="BC">British Columbia</option>
+                            <option value="MB">Manitoba</option>
+                            <option value="NB">New Brunswick</option>
+                            <option value="NL">Newfoundland & Labrador</option>
+                            <option value="NT">Northwest Territories</option>
+                            <option value="NU">Nunavut</option>
+                            <option value="NS">Nova Scotia</option>
+                            <option value="ON">Ontario</option>
+                            <option value="PE">Prince Edward Island</option>
+                            <option value="QC">Quebec</option>
+                            <option value="SK">Saskatchewan</option>
+                            <option value="YT">Yukon</option>
+                        </select>
+                    </div>
+                </div>
 
             </form>
         </section>
